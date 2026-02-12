@@ -221,6 +221,56 @@
             color: var(--gray);
         }
 
+        .waitlist-update {
+            background: rgba(255, 0, 0, 0.08);
+            border: 1px solid rgba(255, 0, 0, 0.3);
+            padding: 40px 30px;
+            margin-bottom: 60px;
+        }
+
+        .waitlist-update h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 20px;
+            margin-bottom: 25px;
+            letter-spacing: 0.05em;
+            color: var(--red);
+            text-transform: uppercase;
+        }
+
+        .waitlist-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 25px;
+        }
+
+        .stat-item {
+            border-left: 3px solid var(--red);
+            padding-left: 20px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gray);
+            margin-bottom: 8px;
+        }
+
+        .stat-value {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 28px;
+            color: var(--red);
+            letter-spacing: 0.02em;
+        }
+
+        .waitlist-message {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--gray);
+            font-style: italic;
+        }
+
         .signup-section {
             background: var(--white);
             color: var(--black);
@@ -436,6 +486,23 @@
                    → We just match you, then get out of the way</p>
             </div>
 
+            <div class="waitlist-update">
+                <h3>Waitlist Update</h3>
+                <div class="waitlist-stats">
+                    <div class="stat-item">
+                        <div class="stat-label">Men's Spots</div>
+                        <div class="stat-value">FULL (28/28)</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Women's Spots</div>
+                        <div class="stat-value">2/30 💀</div>
+                    </div>
+                </div>
+                <div class="waitlist-message">
+                    If you're a woman in Bangalore, you literally have 28 guys waiting to talk to you.
+                </div>
+            </div>
+
             <div class="signup-section">
                 <h2>Save Your Spot</h2>
                 <form id="signupForm">
@@ -568,6 +635,14 @@
             
             if (age < 18 || age > 99) {
                 alert('You must be between 18 and 99 years old.');
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                return;
+            }
+            
+            const gender = document.getElementById('gender').value;
+            if (gender === 'male') {
+                alert('Men\'s spots are full! Women\'s signup still open.');
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
                 return;
