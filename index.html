@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BE MY VALENTINE — IIT Bangalore Speed Dating Waitlist</title>
+    <title>BE MY VALENTINE — Bangalore Speed Dating Waitlist</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -292,6 +292,20 @@
             font-style: italic;
         }
 
+        .track-note {
+            margin-bottom: 24px;
+            padding: 14px 16px;
+            border-left: 3px solid var(--red);
+            background: rgba(255, 0, 0, 0.08);
+            color: #262626;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
         .signup-section {
             background: var(--white);
             color: var(--black);
@@ -448,22 +462,23 @@
     <div class="container">
         <div class="header">
             <h1 class="title">Be My<br>Valentine</h1>
-            <p class="subtitle">Curated Speed Dating • Online • <strong>Bangalore + IIT Crowd</strong></p>
+            <p class="subtitle">Intentional Speed Dating • Online • <strong>Bangalore</strong></p>
             <div class="usp-strip">
                 <span class="usp-pill">No Profiles</span>
                 <span class="usp-pill">10-Minute Vibe Checks</span>
-                <span class="usp-pill">IIT-Only Cohorts</span>
+                <span class="usp-pill">IIT-Verified Men</span>
+                <span class="usp-pill">Open Women's Applications</span>
                 <span class="usp-pill">Balanced Matching</span>
             </div>
         </div>
 
         <div id="successMessage" class="success-message">
             <h3>YOU'RE IN</h3>
-            <p>You're on the IIT Bangalore priority list. Invite details land by email.</p>
+            <p>You're on the waitlist. We'll send your invite update by email.</p>
         </div>
 
         <div class="countdown-section">
-            <div class="countdown-label">Next Cohort Drops In</div>
+            <div class="countdown-label">Next Round Starts In</div>
             <div class="countdown">
                 <div class="countdown-item">
                     <span class="countdown-value" id="days">00</span>
@@ -490,7 +505,7 @@
                 <div class="info-block">
                     <h2>How It Works</h2>
                     <ul>
-                        <li>You enter a live online room with only IIT community members in Bangalore</li>
+                        <li>You enter a live online room with verified, high-intent singles in Bangalore</li>
                         <li>You get one person and one prompt for a 10-minute conversation</li>
                         <li>If the vibe is good, exchange contacts and take it off-platform</li>
                         <li>If not, instant rematch in under 30 seconds</li>
@@ -507,8 +522,9 @@
             <div class="rules">
                 <h3>THE RULES</h3>
                 <p>→ Bangalore-based singles only<br>
-                   → IIT-only entry (verification required)<br>
-                   → Cohorts are balanced before invites go out<br>
+                   → Men: IIT verification required<br>
+                   → Women: open applications, thoughtful screening<br>
+                   → We keep every round balanced before invites go out<br>
                    → Be online on time or your slot gets released<br>
                    → We don't store chats, photos, or profiles<br>
                    → We match, you talk, then we get out of the way</p>
@@ -522,17 +538,20 @@
                         <div class="stat-value">36</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-label">IIT Women (Verified)</div>
-                        <div class="stat-value">22</div>
+                        <div class="stat-label">Women (Open + Screened)</div>
+                        <div class="stat-value">41</div>
                     </div>
                 </div>
                 <div class="waitlist-message">
-                    Priority this week: IIT Bombay 2025 alumni in Bangalore, then expanded IIT batches as balance allows.
+                    Current focus: IIT men in Bangalore + women from all backgrounds, with respectful screening for intent and safety.
                 </div>
             </div>
 
             <div class="signup-section">
                 <h2>Join The Curated Waitlist</h2>
+                <div class="track-note">
+                    <strong>How entry works:</strong> Men apply through IIT verification. Women can apply from any background. Everyone is reviewed before invite.
+                </div>
                 <form id="signupForm">
                     <div class="form-grid">
                         <div class="form-group">
@@ -567,24 +586,46 @@
                             <input type="number" id="age" name="age" required placeholder="25" min="18" max="99">
                         </div>
 
-                        <div class="form-row">
+                        <div id="menVerificationFields" class="form-row hidden">
                             <div class="form-group">
                                 <label for="iitCampus">IIT Campus</label>
-                                <select id="iitCampus" name="iitCampus" required>
-                                    <option value="">Select...</option>
-                                    <option value="iit-bombay">IIT Bombay</option>
-                                    <option value="iit-delhi">IIT Delhi</option>
-                                    <option value="iit-madras">IIT Madras</option>
-                                    <option value="iit-kanpur">IIT Kanpur</option>
-                                    <option value="iit-kharagpur">IIT Kharagpur</option>
-                                    <option value="other-iit">Other IIT</option>
-                                </select>
+                                <input id="iitCampus" name="iitCampus" list="iitCampusList" placeholder="Start typing IIT name">
+                                <datalist id="iitCampusList">
+                                    <option value="IIT Bhilai"></option>
+                                    <option value="IIT Bhubaneswar"></option>
+                                    <option value="IIT Bombay"></option>
+                                    <option value="IIT Delhi"></option>
+                                    <option value="IIT Dharwad"></option>
+                                    <option value="IIT (BHU) Varanasi"></option>
+                                    <option value="IIT Goa"></option>
+                                    <option value="IIT Gandhinagar"></option>
+                                    <option value="IIT Guwahati"></option>
+                                    <option value="IIT Hyderabad"></option>
+                                    <option value="IIT Indore"></option>
+                                    <option value="IIT Jammu"></option>
+                                    <option value="IIT Jodhpur"></option>
+                                    <option value="IIT Kanpur"></option>
+                                    <option value="IIT Kharagpur"></option>
+                                    <option value="IIT Madras"></option>
+                                    <option value="IIT Mandi"></option>
+                                    <option value="IIT Palakkad"></option>
+                                    <option value="IIT Patna"></option>
+                                    <option value="IIT Roorkee"></option>
+                                    <option value="IIT Ropar"></option>
+                                    <option value="IIT Tirupati"></option>
+                                    <option value="IIT (ISM) Dhanbad"></option>
+                                </datalist>
                             </div>
 
                             <div class="form-group">
                                 <label for="batchYear">Batch Year</label>
-                                <input type="number" id="batchYear" name="batchYear" required placeholder="2025" min="2005" max="2026">
+                                <input type="number" id="batchYear" name="batchYear" placeholder="2025" min="2005" max="2026">
                             </div>
+                        </div>
+
+                        <div id="openBackgroundField" class="form-group hidden">
+                            <label for="background">Background</label>
+                            <input type="text" id="background" name="background" placeholder="College, company, or anything you'd like us to know (optional)">
                         </div>
                         
                         <div class="form-group" style="flex-direction: row; align-items: center; gap: 10px;">
@@ -654,6 +695,42 @@
 
         // Form submission with spam protection
         let lastSubmitTime = 0;
+        const genderField = document.getElementById('gender');
+        const menVerificationFields = document.getElementById('menVerificationFields');
+        const openBackgroundField = document.getElementById('openBackgroundField');
+        const iitCampusField = document.getElementById('iitCampus');
+        const batchYearField = document.getElementById('batchYear');
+        const backgroundField = document.getElementById('background');
+        const validIITCampuses = [
+            'iit bhilai', 'iit bhubaneswar', 'iit bombay', 'iit delhi', 'iit dharwad',
+            'iit (bhu) varanasi', 'iit goa', 'iit gandhinagar', 'iit guwahati', 'iit hyderabad',
+            'iit indore', 'iit jammu', 'iit jodhpur', 'iit kanpur', 'iit kharagpur',
+            'iit madras', 'iit mandi', 'iit palakkad', 'iit patna', 'iit roorkee',
+            'iit ropar', 'iit tirupati', 'iit (ism) dhanbad'
+        ];
+
+        function syncVerificationFields() {
+            const gender = genderField.value;
+            const isMale = gender === 'male';
+            const showBackground = gender !== '' && !isMale;
+
+            menVerificationFields.classList.toggle('hidden', !isMale);
+            openBackgroundField.classList.toggle('hidden', !showBackground);
+            iitCampusField.required = isMale;
+            batchYearField.required = isMale;
+            backgroundField.required = showBackground;
+
+            if (isMale) {
+                backgroundField.value = '';
+            }
+            if (!isMale) {
+                iitCampusField.value = '';
+                batchYearField.value = '';
+            }
+        }
+
+        genderField.addEventListener('change', syncVerificationFields);
+        syncVerificationFields();
         
         document.getElementById('signupForm').addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -672,7 +749,9 @@
             
             const email = document.getElementById('email').value;
             const age = parseInt(document.getElementById('age').value);
-            const batchYear = parseInt(document.getElementById('batchYear').value);
+            const batchYearRaw = document.getElementById('batchYear').value.trim();
+            const batchYear = batchYearRaw ? parseInt(batchYearRaw, 10) : null;
+            const gender = document.getElementById('gender').value;
             
             // Basic validation
             if (!email.includes('@') || !email.includes('.')) {
@@ -689,20 +768,38 @@
                 return;
             }
 
-            if (batchYear < 2005 || batchYear > 2026) {
-                alert('Please enter a valid IIT batch year.');
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-                return;
+            if (gender === 'male') {
+                if (!iitCampusField.value) {
+                    alert('IIT campus is required for men.');
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    return;
+                }
+
+                const normalizedCampus = iitCampusField.value.trim().toLowerCase();
+                if (!validIITCampuses.includes(normalizedCampus)) {
+                    alert('Please choose an IIT campus from the list.');
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    return;
+                }
+
+                if (!batchYear || batchYear < 2005 || batchYear > 2026) {
+                    alert('Please enter a valid IIT batch year.');
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    return;
+                }
             }
             
             const formData = {
                 email: email,
-                gender: document.getElementById('gender').value,
+                gender: gender,
                 seeking: document.getElementById('seeking').value,
                 age: age,
-                iitCampus: document.getElementById('iitCampus').value,
+                iitCampus: iitCampusField.value,
                 batchYear: batchYear,
+                background: backgroundField.value.trim(),
                 timestamp: new Date().toISOString()
             };
 
