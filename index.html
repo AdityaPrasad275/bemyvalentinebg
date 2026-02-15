@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BE MY VALENTINE — Speed Dating Feb 14</title>
+    <title>BE MY VALENTINE — IIT Bangalore Speed Dating Waitlist</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -96,6 +96,27 @@
             letter-spacing: 0.05em;
             text-transform: uppercase;
             color: var(--gray);
+        }
+
+        .subtitle strong {
+            color: var(--white);
+        }
+
+        .usp-strip {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .usp-pill {
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            background: rgba(255, 255, 255, 0.06);
+            padding: 8px 12px;
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--white);
         }
 
         .countdown-section {
@@ -427,16 +448,22 @@
     <div class="container">
         <div class="header">
             <h1 class="title">Be My<br>Valentine</h1>
-            <p class="subtitle">Speed Dating • Online • Bangalore</p>
+            <p class="subtitle">Curated Speed Dating • Online • <strong>Bangalore + IIT Crowd</strong></p>
+            <div class="usp-strip">
+                <span class="usp-pill">No Profiles</span>
+                <span class="usp-pill">10-Minute Vibe Checks</span>
+                <span class="usp-pill">IIT-Only Cohorts</span>
+                <span class="usp-pill">Balanced Matching</span>
+            </div>
         </div>
 
         <div id="successMessage" class="success-message">
             <h3>YOU'RE IN</h3>
-            <p>Check your email on Feb 13 at 7PM for login instructions.</p>
+            <p>You're on the IIT Bangalore priority list. Invite details land by email.</p>
         </div>
 
         <div class="countdown-section">
-            <div class="countdown-label">Event Starts In</div>
+            <div class="countdown-label">Next Cohort Drops In</div>
             <div class="countdown">
                 <div class="countdown-item">
                     <span class="countdown-value" id="days">00</span>
@@ -455,7 +482,7 @@
                     <span class="countdown-unit">Seconds</span>
                 </div>
             </div>
-            <div class="event-details">FEBRUARY 13 • 8:00 PM - 10:00 PM IST</div>
+            <div class="event-details">Rolling invite drops • 8:00 PM IST • 10-minute rounds</div>
         </div>
 
         <div class="content">
@@ -463,48 +490,49 @@
                 <div class="info-block">
                     <h2>How It Works</h2>
                     <ul>
-                        <li>8:00 PM sharp: get matched with someone</li>
-                        <li>Chat for 10 minutes via a random prompt</li>
-                        <li>Feeling it? Exchange Instas and keep talking</li>
-                        <li>Not feeling it? Next person in 30 seconds</li>
-                        <li>Repeat until 10 PM or you find someone</li>
+                        <li>You enter a live online room with only IIT community members in Bangalore</li>
+                        <li>You get one person and one prompt for a 10-minute conversation</li>
+                        <li>If the vibe is good, exchange contacts and take it off-platform</li>
+                        <li>If not, instant rematch in under 30 seconds</li>
+                        <li>Repeat until the session ends or you choose to stop</li>
                     </ul>
                 </div>
 
                 <div class="info-block">
                     <h2>What This Isn't</h2>
-                    <p>No swiping. No profiles. No endless scrolling. No chatting for weeks. Just real conversations with real people in real time. Like speed dating, but you're not leaving your house.</p>
+                    <p>No swiping. No profile photos. No performative bios. No weeks of texting. You talk first, decide fast, and meet outside the platform only if both of you want to.</p>
                 </div>
             </div>
 
             <div class="rules">
                 <h3>THE RULES</h3>
-                <p>→ Bangalore singles only<br>
-                   → 100 spots total<br>
-                   → Be online at 8 PM sharp or you're out<br>
-                   → We don't store your chats, photos, or profiles<br>
-                   → We just match you, then get out of the way</p>
+                <p>→ Bangalore-based singles only<br>
+                   → IIT-only entry (verification required)<br>
+                   → Cohorts are balanced before invites go out<br>
+                   → Be online on time or your slot gets released<br>
+                   → We don't store chats, photos, or profiles<br>
+                   → We match, you talk, then we get out of the way</p>
             </div>
 
             <div class="waitlist-update">
                 <h3>Waitlist Update</h3>
                 <div class="waitlist-stats">
                     <div class="stat-item">
-                        <div class="stat-label">Men's Spots</div>
-                        <div class="stat-value">FULL (30/30)</div>
+                        <div class="stat-label">IIT Men (Verified)</div>
+                        <div class="stat-value">36</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-label">Women's Spots</div>
-                        <div class="stat-value">10/30 💀</div>
+                        <div class="stat-label">IIT Women (Verified)</div>
+                        <div class="stat-value">22</div>
                     </div>
                 </div>
                 <div class="waitlist-message">
-                    If you're a woman in Bangalore, you literally have 28 guys waiting to talk to you.
+                    Priority this week: IIT Bombay 2025 alumni in Bangalore, then expanded IIT batches as balance allows.
                 </div>
             </div>
 
             <div class="signup-section">
-                <h2>Save Your Spot</h2>
+                <h2>Join The Curated Waitlist</h2>
                 <form id="signupForm">
                     <div class="form-grid">
                         <div class="form-group">
@@ -538,11 +566,31 @@
                             <label for="age">Age</label>
                             <input type="number" id="age" name="age" required placeholder="25" min="18" max="99">
                         </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="iitCampus">IIT Campus</label>
+                                <select id="iitCampus" name="iitCampus" required>
+                                    <option value="">Select...</option>
+                                    <option value="iit-bombay">IIT Bombay</option>
+                                    <option value="iit-delhi">IIT Delhi</option>
+                                    <option value="iit-madras">IIT Madras</option>
+                                    <option value="iit-kanpur">IIT Kanpur</option>
+                                    <option value="iit-kharagpur">IIT Kharagpur</option>
+                                    <option value="other-iit">Other IIT</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="batchYear">Batch Year</label>
+                                <input type="number" id="batchYear" name="batchYear" required placeholder="2025" min="2005" max="2026">
+                            </div>
+                        </div>
                         
                         <div class="form-group" style="flex-direction: row; align-items: center; gap: 10px;">
                             <input type="checkbox" id="age-confirm" required style="width: auto; margin: 0;">
                             <label for="age-confirm" style="font-size: 14px; text-transform: none; letter-spacing: 0; font-weight: 400; cursor: pointer;">
-                                I confirm I'm 18+ and understand this is a one-time experimental event, not a dating service.
+                                I confirm I'm 18+ and understand this is a curated social event, not a dating service.
                             </label>
                         </div>
                     </div>
@@ -551,7 +599,7 @@
                 </form>
 
                 <div class="spots-counter">
-                    <span class="spots-number" id="spotsLeft">57</span>
+                    <span class="spots-number" id="spotsLeft">48</span>
                     <span>Spots Remaining</span>
                 </div>
             </div>
@@ -560,15 +608,15 @@
         <div class="footer">
             <p>Questions? DM me on @adityanprasad74 on X</p>
             <p style="margin-top: 20px; font-size: 12px; opacity: 0.6; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;">
-                <strong>Privacy:</strong> We only collect your email to send login instructions. We don't store your chats, photos, or profile data. We won't sell or share your info. This is a one-time event, not a business. To delete your signup, email us.
+                <strong>Privacy:</strong> We only collect your signup details to run matching and send invite instructions. We don't store your chats, photos, or profile data. We won't sell or share your info. To delete your signup, email us.
             </p>
-            <p style="margin-top: 10px; opacity: 0.5;">Made with ❤️ in Bangalore</p>
+            <p style="margin-top: 10px; opacity: 0.5;">Made in Bangalore for intentional conversations</p>
         </div>
     </div>
 
     <script>
         // Countdown Timer
-        const eventDate = new Date('2026-02-13T20:00:00+05:30').getTime();
+        const eventDate = new Date('2026-03-01T20:00:00+05:30').getTime();
 
         function updateCountdown() {
             const now = new Date().getTime();
@@ -596,9 +644,9 @@
         setInterval(updateCountdown, 1000);
 
         // Spots counter animation
-        let currentSpots = 67;
+        let currentSpots = 48;
         setInterval(() => {
-            if (Math.random() > 0.7 && currentSpots > 45) {
+            if (Math.random() > 0.7 && currentSpots > 30) {
                 currentSpots -= Math.floor(Math.random() * 3) + 1;
                 document.getElementById('spotsLeft').textContent = currentSpots;
             }
@@ -610,7 +658,7 @@
         document.getElementById('signupForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             
-            // Rate limitiggng: prevent multiple submissions within 60 seconds
+            // Rate limiting: prevent multiple submissions within 60 seconds
             const now = Date.now();
             if (now - lastSubmitTime < 60000) {
                 alert('Please wait a minute before submitting again.');
@@ -624,6 +672,7 @@
             
             const email = document.getElementById('email').value;
             const age = parseInt(document.getElementById('age').value);
+            const batchYear = parseInt(document.getElementById('batchYear').value);
             
             // Basic validation
             if (!email.includes('@') || !email.includes('.')) {
@@ -639,10 +688,9 @@
                 submitBtn.disabled = false;
                 return;
             }
-            
-            const gender = document.getElementById('gender').value;
-            if (gender === 'male') {
-                alert('Men\'s spots are full! Women\'s signup still open.');
+
+            if (batchYear < 2005 || batchYear > 2026) {
+                alert('Please enter a valid IIT batch year.');
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
                 return;
@@ -653,6 +701,8 @@
                 gender: document.getElementById('gender').value,
                 seeking: document.getElementById('seeking').value,
                 age: age,
+                iitCampus: document.getElementById('iitCampus').value,
+                batchYear: batchYear,
                 timestamp: new Date().toISOString()
             };
 
@@ -683,7 +733,7 @@
                 
             } catch (error) {
                 console.error('Error:', error);
-                alert('Something went wrong. Try again or DM us on Reddit!');
+                alert('Something went wrong. Try again or DM us on X.');
             } finally {
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
